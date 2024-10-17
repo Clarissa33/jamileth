@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo React</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div id="app"> </div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://reactjs.org/link/react-devtools-faq"></script>
+    <script>
+        class HolaMundo extends React.Component {
+          render() {
+            const r1 = React.createElement('h1', {}, 'Hola mundo');
+            const r2 = React.createElement('h2', {}, 'Aprendiendo Mas De React');
+            const p = React.createElement('p', {}, ' El secreto del éxito verdadero es el CONOCIMIENTO unido a la ACCIÓN.');
+      
+           return [r1, r2, p];
+         }
+        }
+            
+        const domContainer = document.querySelector('#app');
+        const root = ReactDOM.createRoot(domContainer);
+        root.render(React.createElement(HolaMundo));
+      </script>
+</body>
+</html>
